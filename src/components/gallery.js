@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./galleryImage.css"
 import axios from 'axios'
 
-const Gallery = () => {
+const Gallery = ({ searchQuery }) => {
 
     const [images, setImages] = useState([])
     useEffect(()=> {
@@ -27,11 +27,16 @@ const Gallery = () => {
         } catch (error) {
           console.error('Error deleting image:', error);
         }
-      };
+    };
+
+    const filteredImages = images.filter((image) =>
+        image.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
   return (
     <>
         <div className='w-[1440px] h-fit mx-auto my-[20px] sm:columns-3 gap-[30px]'>
-            {images.map((image) => (
+            {filteredImages.map((image) => (
             <div className='w-[100%] mb-[30px] break-inside-avoid' key={image._id}>
                 <div className="container">
                 <img className='' src={image.imageUrl} alt={image.name} />

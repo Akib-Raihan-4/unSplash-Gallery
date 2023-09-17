@@ -48,7 +48,7 @@ export const Nav = () => {
       )}
 
       {/* Render the Gallery component and pass searchQuery as a prop */}
-     
+      <Gallery searchQuery={searchQuery} />
     </div>
   );
 };

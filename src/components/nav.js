@@ -13,7 +13,7 @@ export const Nav = () => {
       rounded>
         <NavbarBrand
         >
-          <img src='./my_unsplash_logo.svg' className='cursor-pointer' />
+          <img src='./my_unsplash_logo.svg' className='cursor-pointer mr-5'/>
           <TextInput
             icon={BiSearch}
             id="email4"

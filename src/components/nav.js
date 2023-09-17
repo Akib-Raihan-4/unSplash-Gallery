@@ -1,13 +1,16 @@
+// Nav.js
+
 import React, { useState } from 'react';
 import { Button, Navbar } from 'flowbite-react';
 import { NavbarBrand } from 'flowbite-react/lib/esm/components/Navbar/NavbarBrand';
-import { Label, TextInput } from 'flowbite-react';
+import { TextInput } from 'flowbite-react';
 import { BiSearch } from 'react-icons/bi';
-import Modal  from './modal';
+import Modal from './modal';
+import Gallery from './gallery';
 
 export const Nav = () => {
-  
   const [modalVisible, setModalVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
@@ -20,10 +23,12 @@ export const Nav = () => {
           <img src='./my_unsplash_logo.svg' className='cursor-pointer mr-5' />
           <TextInput
             icon={BiSearch}
-            id="email4"
+            id="search-input"
             placeholder="Search by name"
             type="text"
             className='w-[300px]'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </NavbarBrand>
         {/* Trigger button to open the modal */}
@@ -39,8 +44,11 @@ export const Nav = () => {
 
       {/* Modal */}
       {modalVisible && (
-        <Modal closeModal={toggleModal}/>
+        <Modal closeModal={toggleModal} />
       )}
+
+      {/* Render the Gallery component and pass searchQuery as a prop */}
+     
     </div>
   );
 };

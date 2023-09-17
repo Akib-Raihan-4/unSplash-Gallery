@@ -1,20 +1,29 @@
 import React,{useState} from 'react'
+import axios from 'axios';
 
 const Modal = ({closeModal}) => {
     const [label, setLabel] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
-    const handleSaveClick = () => {
+    const handleSaveClick = async () => {
+        try {
+            const response = await axios.post('http://localhost:4000/api/add-image', {
+            name: label, 
+            imageUrl: photoUrl,
+            });
+        
+            console.log('Image added:', response.data);
+            closeModal();
+        } catch (error) {
+            console.error('Error adding image:', error);
+        }
+    };
+      
     
-        console.log('Label:', label);
-        console.log('Photo URL:', photoUrl);
-        closeModal()
-      };
     
-    
-      const handleCancelClick = () => {
-        closeModal()
-      };
+    const handleCancelClick = () => {
+    closeModal()
+    };
       
   return (
     <div

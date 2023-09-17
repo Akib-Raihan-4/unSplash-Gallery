@@ -1,4 +1,4 @@
-const { addImage } = require('../controllers/image_Controllers')
+const { addImage, getImage, deleteImage } = require('../controllers/image_Controllers')
 
 const router = require('express').Router()
 
@@ -9,5 +9,7 @@ router.get('/', (req,res)=>{
 })
 
 router.post('/add-image', addImage)
+    .get('/get-image', getImage)
+    .delete('/delete-image/:id', deleteImage)
 
 module.exports = router

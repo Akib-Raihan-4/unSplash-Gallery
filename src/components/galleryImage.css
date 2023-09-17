@@ -28,7 +28,7 @@
 .product-info{
     position: absolute;
     bottom:60px;
-    left: 20px;
+    left: -140px;
     width: 80%;
     color:white;
     font-family: arial;
@@ -41,6 +41,7 @@
 
 .container:hover .product-info{
     opacity: 1;
+    left: 30px;
 }
 
 .buttonLay{

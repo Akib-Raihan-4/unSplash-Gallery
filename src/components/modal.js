@@ -7,7 +7,7 @@ const Modal = ({closeModal}) => {
     const [modalVisible, setModalVisible] = useState(false);
     const handleSaveClick = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/api/add-image', {
+            const response = await axios.post('https://unsplashapi-production.up.railway.app/api/add-image', {
             name: label, 
             imageUrl: photoUrl,
             });

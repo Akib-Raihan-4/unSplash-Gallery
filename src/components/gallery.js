@@ -8,7 +8,7 @@ const Gallery = ({ searchQuery }) => {
     useEffect(()=> {
         async function fetchImages(){
             try{
-                const res = await axios.get('http://localhost:4000/api/get-image');
+                const res = await axios.get('https://unsplashapi-production.up.railway.app/api/get-image');
                 console.log(res)
                 setImages(res.data);
             }catch(error){
@@ -20,7 +20,7 @@ const Gallery = ({ searchQuery }) => {
     const handleDeleteImage = async (imageId) => {
         try {
           // Make a DELETE request to your API endpoint with the image's unique identifier
-          await axios.delete(`http://localhost:4000/api/delete-image/${imageId}`);
+          await axios.delete(`https://unsplashapi-production.up.railway.app/api/delete-image/${imageId}`);
           
           // Optionally, you can also update the images state to reflect the deleted image
           setImages((prevImages) => prevImages.filter((image) => image._id !== imageId));

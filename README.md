@@ -38,10 +38,9 @@
 ## Overview
 
 ![screenshot](./public/SS.png)
-<<<<<<< HEAD
+
 ![screenshot](./public/mvSS.png)
-=======
->>>>>>> a99fc850f6a04cf47cd4ee67ec50532fe55b81b1
+
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 

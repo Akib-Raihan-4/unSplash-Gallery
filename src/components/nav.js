@@ -17,8 +17,9 @@ export const Nav = () => {
   };
 
   return (
-    <div className='w-[1440px] h-fit mx-auto mt-3'>
-      <Navbar fluid rounded>
+    <div className='sm:w-[1440px] h-fit mx-auto mt-3 relative'>
+      <div className='fixed top-0 z-10 w-[1440px]'>
+      <Navbar fluid className='bg-opacity-70 sm:px-0'>
         <NavbarBrand>
           <img src='./my_unsplash_logo.svg' className='cursor-pointer mr-5' />
           <TextInput
@@ -41,6 +42,7 @@ export const Nav = () => {
           Add a photo
         </Button>
       </Navbar>
+      </div>
 
       {/* Modal */}
       {modalVisible && (

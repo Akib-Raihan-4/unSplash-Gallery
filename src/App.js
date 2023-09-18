@@ -5,10 +5,9 @@ import { Nav } from './components/nav';
 
 function App() {
   return (
-    <>
+    <div className='h-[1000000px]'>
       <Nav/>
-      
-    </>
+    </div>
   );
 }
 

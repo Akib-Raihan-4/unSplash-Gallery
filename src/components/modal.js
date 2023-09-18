@@ -32,7 +32,7 @@ const Modal = ({closeModal}) => {
     >
         <div className="modal-overlay absolute inset-0 bg-black opacity-50"></div>
 
-        <div className="modal-container bg-white w-[600px] mx-auto rounded-[12px] shadow-lg z-50 overflow-y-auto">
+        <div className="modal-container bg-white sm:w-[600px] w-[90%] mx-auto rounded-[12px] shadow-lg z-50 overflow-y-auto">
         <div className="modal-content py-4 text-left px-6">
             <div className="flex justify-between items-center pb-3">
             <p className="[font-family:'Noto_Sans-Medium',Helvetica] font-medium text-[#333333] text-[24px]">Add a new photo</p>

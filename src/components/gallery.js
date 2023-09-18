@@ -35,7 +35,7 @@ const Gallery = ({ searchQuery }) => {
 
   return (
     <>
-        <div className='w-[1440px] h-fit mx-auto my-[20px] sm:columns-3 gap-[30px]'>
+        <div className='sm:w-[1440px] w-[90%] h-fit mx-auto my-[80px] sm:columns-3 gap-[30px]'>
             {filteredImages.map((image) => (
             <div className='w-[100%] mb-[30px] break-inside-avoid' key={image._id}>
                 <div className="container">
